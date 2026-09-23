@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="">
+    <link rel="icon" type="image/svg+xml" href="../assets/generated/logo.svg">
+    <title>Add On Communications - Ultra Fast Fiber Internet & Smart Entertainment</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/keyframes.css">
+</head>
+<body>
+
+<header>
+
+    <nav class="navbar">
+        <div class="container flex items-center justify-between h-20">
+            <a href="index.html" class="logo-link nav-logo">
+                <img src="../assets/images/gallery/logo.jpeg" alt="Add On Communications Logo" class="logo-img">
+                <span>Add On</span><span>Communications</span>
+            </a>
+
+            <ul class="nav-links flex gap-8 items-center">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="pages/about-us.html" class="nav-link">About Us</a></li>
+                <li><a href="pages/products.html" class="nav-link">Products</a></li>
+                <li><a href="pages/channel-packages.html" class="nav-link">Channels</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">Compliance
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Regulation 4.4</a></li>
+                        <li><a href="#">RIO</a></li>
+                        <li><a href="#">NCF</a></li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">Subscriber
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Selfcare Login</a></li>
+                        <li><a href="#">CAF Form</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </li>
+                <li><a href="pages/contact-us.html" class="nav-link">Contact</a></li>
+            </ul>
+
+            <button id="menuToggle" class="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="drawer-header flex items-center justify-between">
+            <img src="../assets/images/gallery/logo.jpeg" alt="Add On Communications Logo" class="drawer-logo">
+            <button id="drawerClose" class="drawer-close" aria-label="Close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+        </div>
+        <ul class="drawer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/about-us.html">About Us</a></li>
+            <li><a href="pages/products.html">Products</a></li>
+            <li><a href="pages/channel-packages.html">Channels</a></li>
+            <li class="drawer-subheading">Compliance</li>
+            <li><a href="#">Regulation 4.4</a></li>
+            <li><a href="#">RIO</a></li>
+            <li><a href="#">NCF</a></li>
+            <li class="drawer-subheading">Subscriber</li>
+            <li><a href="#">Selfcare Login</a></li>
+            <li><a href="#">CAF Form</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="pages/contact-us.html">Contact</a></li>
+        </ul>
+    </div>
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+</header>
+
+<main>
+
+    <section class="hero-carousel">
+        <div class="slide active">
+            <div class="slide-bg" style="background-image: url('https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=modern+family+enjoying+4k+ultra+hd+smart+tv+entertainment+in+living+room+with+fiber+wifi+router+connected+devices&image_size=landscape_16_9');"></div>
+            <div class="slide-overlay bg-gradient-to-r from-black/70 to-primary-dark/60 opacity-80"></div>
+            <div class="container slide-content">
+                <h2>Smart TV. Smart Living.</h2>
+                <p>Ultra fast fiber internet and premium 4K entertainment for every Indian home.</p>
+                <a href="pages/contact-us.html#contact-form" class="btn-primary">Get Started</a>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="slide-bg" style="background-image: url('https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=fiber+optic+internet+cables+connected+to+high+tech+server+room+with+green+led+lights+and+network+switches&image_size=landscape_16_9');"></div>
+            <div class="slide-overlay bg-gradient-to-r from-black/70 to-primary-dark/60 opacity-80"></div>
+            <div class="container slide-content">
+                <h2>Fiber Powered Network</h2>
+                <p>Enterprise-grade infrastructure delivering blazing speeds and 99.9% uptime.</p>
+                <a href="pages/contact-us.html#contact-form" class="btn-primary">Get Started</a>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="slide-bg" style="background-image: url('https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=diverse+happy+indian+family+watching+cricket+match+on+big+screen+smart+tv+together+on+sofa&image_size=landscape_16_9');"></div>
+            <div class="slide-overlay bg-gradient-to-r from-black/70 to-primary-dark/60 opacity-80"></div>
+            <div class="container slide-content">
+                <h2>Cricket. Movies. Family Time.</h2>
+                <p>Live sports, cinema and thousands of hours of on-demand entertainment.</p>
+                <a href="pages/contact-us.html#contact-form" class="btn-primary">Get Started</a>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="slide-bg" style="background-image: url('https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=premium+digital+set+top+box+next+to+modern+tv+with+streaming+apps+on+screen+4k+hdr+entertainment&image_size=landscape_16_9');"></div>
+            <div class="slide-overlay bg-gradient-to-r from-black/70 to-primary-dark/60 opacity-80"></div>
+            <div class="container slide-content">
+                <h2>Next-Gen Set Top Box</h2>
+                <p>4K HDR streaming, voice search and OTT apps built into one smart box.</p>
+                <a href="pages/contact-us.html#contact-form" class="btn-primary">Get Started</a>
+            </div>
+        </div>
+
+        <button class="prev-btn" aria-label="Previous slide">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="next-btn" aria-label="Next slide">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+
+        <div class="carousel-dots">
+            <button class="dot active" data-slide="0" aria-label="Slide 1"></button>
+            <button class="dot" data-slide="1" aria-label="Slide 2"></button>
+            <button class="dot" data-slide="2" aria-label="Slide 3"></button>
+            <button class="dot" data-slide="3" aria-label="Slide 4"></button>
+        </div>
+    </section>
+
+    <section class="device-section">
+        <div class="container">
+            <div class="section-label text-center">Available On</div>
+            <h2 class="section-heading text-center">Watch Anywhere on Your Favourite Devices</h2>
+            <div class="device-strip grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+                <div class="device-card">
+                    <div class="device-icon bg-android">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 1 18 0"/><path d="M12 3v18"/><path d="M8 7l4 4 4-4"/></svg>
+                    </div>
+                    <div class="device-name">Android TV</div>
+                </div>
+                <div class="device-card">
+                    <div class="device-icon bg-lg">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="14" rx="2"/><line x1="8" y1="22" x2="16" y2="22"/><line x1="12" y1="18" x2="12" y2="22"/></svg>
+                    </div>
+                    <div class="device-name">LG TV</div>
+                </div>
+                <div class="device-card">
+                    <div class="device-icon bg-tizen">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                    </div>
+                    <div class="device-name">Tizen OS</div>
+                </div>
+                <div class="device-card">
+                    <div class="device-icon bg-fire">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2c1.5 3 3 4.5 3 7a3 3 0 0 1-6 0c0-1 .5-2 1-2.5.5-.5 1-1.5 1-2.5z"/><path d="M8.5 14c.5 2 2 3.5 3.5 3.5s3-1.5 3.5-3.5"/><path d="M12 19v3"/></svg>
+                    </div>
+                    <div class="device-name">Fire TV</div>
+                </div>
+                <div class="device-card">
+                    <div class="device-icon bg-iptv">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                    </div>
+                    <div class="device-name">IPTV Hub</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hardware-section bg-white">
+        <div class="container grid lg:grid-cols-2 items-center gap-12">
+            <div class="hardware-img-col">
+                <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=premium+black+smart+4k+set+top+box+with+remote+control+on+white+table+studio+lighting+product+photo&image_size=square_hd" alt="Add On Communications 4K Set Top Box" class="hardware-img">
+            </div>
+            <div class="hardware-content">
+                <div class="section-label">NEXT GENERATION HARDWARE</div>
+                <h2 class="section-heading">The Box That Changes Everything</h2>
+                <p>Powered by our custom silicon and tuned for the Indian home, the Add On Smart 4K Box brings together live TV, catch-up, OTT apps and smart home controls in one elegant device. Dolby audio, HDR10 visuals and a lightning-fast interface make every moment feel cinematic.</p>
+                <div class="feature-grid grid sm:grid-cols-2 gap-4 mt-8">
+                    <div class="feature-sub-card">
+                        <div class="feature-sub-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="14" rx="2"/><polygon points="10 9 15 12 10 15 10 9"/></svg>
+                        </div>
+                        <h4>4K Streaming</h4>
+                        <p>Ultra HD 2160p playback with HDR10+ and Dolby Vision.</p>
+                    </div>
+                    <div class="feature-sub-card">
+                        <div class="feature-sub-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+                        </div>
+                        <h4>Voice Search</h4>
+                        <p>Find movies, shows and channels with your voice in 10+ languages.</p>
+                    </div>
+                    <div class="feature-sub-card">
+                        <div class="feature-sub-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg>
+                        </div>
+                        <h4>Cloud Recording</h4>
+                        <p>Record your favourite shows to the cloud and watch anywhere.</p>
+                    </div>
+                    <div class="feature-sub-card">
+                        <div class="feature-sub-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                        </div>
+                        <h4>Multi-Screen Mirror</h4>
+                        <p>Cast seamlessly from your phone, tablet or laptop.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="entertainment-section bg-gray-50">
+        <div class="container grid lg:grid-cols-2 items-center gap-12">
+            <div class="entertainment-content">
+                <div class="section-label">PREMIUM ENTERTAINMENT</div>
+                <h2 class="section-heading">Digital Cable TV Entertainment in HD</h2>
+                <p>Experience the richness of over 600 channels across genres, languages and regions. From blockbuster Hindi movies to regional soaps, from live international sports to documentaries, every frame is delivered in crystal-clear Full HD with 5.1 surround audio.</p>
+                <div class="entertainment-features grid sm:grid-cols-2 gap-4 mt-8">
+                    <div class="feature-card">
+                        <div class="feature-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7l5-3 5 3 5-3 5 3v10l-5 3-5-3-5 3-5-3V7z"/><polyline points="2 17 7 20 7 10 12 7"/></svg>
+                        </div>
+                        <h4>Full HD 1080p Quality</h4>
+                        <p>Cinematic picture quality on every HD channel, every day.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <h4>Watch Anytime</h4>
+                        <p>Pause, rewind and restart live TV for up to 7 days.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="entertainment-img-col">
+                <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=happy+indian+family+of+four+sitting+on+couch+watching+entertainment+content+on+large+tv+screen+at+home&image_size=square_hd" alt="Family enjoying entertainment on Add On Communications" class="entertainment-img">
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section gradient">
+        <div class="container grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+            <div class="stat-col">
+                <h3 class="counter-num" data-target="2000000">0</h3>
+                <label class="stat-label">Happy Subscribers</label>
+                <small class="stat-subtitle">and growing every day</small>
+            </div>
+            <div class="stat-col">
+                <h3 class="counter-num" data-target="100">0</h3>
+                <label class="stat-label">Cities Covered</label>
+                <small class="stat-subtitle">across Tamil Nadu & India</small>
+            </div>
+            <div class="stat-col">
+                <h3 class="counter-num" data-target="500">0</h3>
+                <label class="stat-label">LCO Partners</label>
+                <small class="stat-subtitle">trusted local operators</small>
+            </div>
+            <div class="stat-col">
+                <h3 class="counter-num" data-target="12">0</h3>
+                <label class="stat-label">Years in Business</label>
+                <small class="stat-subtitle">serving Indian homes</small>
+            </div>
+        </div>
+    </section>
+
+    <section class="tabs-section">
+        <div class="container">
+            <div class="section-label text-center">TECHNOLOGY</div>
+            <h2 class="section-heading text-center">Engineered for Excellence</h2>
+
+            <div class="tab-list flex gap-2 justify-center mt-8 flex-wrap">
+                <button class="tab-btn active" data-tab="strengths">Our Strengths</button>
+                <button class="tab-btn" data-tab="features">Core Features</button>
+            </div>
+
+            <div class="tab-panel active" id="strengths">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                    <div class="tab-card">
+                        <div class="tab-card-icon">
+                            <img src="../assets/generated/icons/24x7-support.svg" alt="24x7 Support">
+                        </div>
+                        <h4>24x7 Support</h4>
+                        <p>Round-the-clock customer care team available via phone, chat and email to resolve issues in minutes.</p>
+                    </div>
+                    <div class="tab-card">
+                        <div class="tab-card-icon">
+                            <img src="../assets/generated/icons/local-service.svg" alt="Local Service Response">
+                        </div>
+                        <h4>Local Service Response</h4>
+                        <p>Dedicated LCO engineers on the ground ensure on-site support within hours, not days.</p>
+                    </div>
+                    <div class="tab-card">
+                        <div class="tab-card-icon">
+                            <img src="../assets/generated/icons/all-india.svg" alt="All India Coverage">
+                        </div>
+                        <h4>All India Coverage</h4>
+                        <p>Expanding footprint across 100+ cities with redundant ring networks for maximum uptime.</p>
+                    </div>
+                    <div class="tab-card">
+                        <div class="tab-card-icon">
+                            <img src="../assets/generated/icons/ott-integration.svg" alt="OTT Integration">
+                        </div>
+                        <h4>OTT Integration</h4>
+                        <p>Native Netflix, Prime, Disney+Hotstar, ZEE5, SonyLIV and more integrated inside the set top box.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-panel" id="features">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+                    <div class="tab-card">
+                        <div class="tab-card-icon">
+                            <img src="../assets/generated/icons/low-latency.svg" alt="Low Latency">
+                        </div>
+                        <h4>Low Latency</h4>
+                        <p>Optimized routing delivers sub-20ms latency for live sports and real-time gaming.</p>
+                    </div>
+                    <div class="tab-card">
+                        <div class="tab-card-icon">
+                            <img src="../assets/generated/icons/channel-stability.svg" alt="Channel Stability">
+                        </div>
+                        <h4>Channel Stability</h4>
+                        <p>Redundant fiber paths and enterprise headend keep every channel online 24/7.</p>
+                    </div>
+                    <div class="tab-card">
+                        <div class="tab-card-icon">
+                            <img src="../assets/generated/icons/lco-network.svg" alt="Local LCO Network">
+                        </div>
+                        <h4>Local LCO Network</h4>
+                        <p>500+ LCO partners bring hyper-local last-mile service that big ISPs can't match.</p>
+                    </div>
+                    <div class="tab-card">
+                        <div class="tab-card-icon">
+                            <img src="../assets/generated/icons/enterprise-headend.svg" alt="Enterprise-Grade Headend">
+                        </div>
+                        <h4>Enterprise-Grade Headend</h4>
+                        <p>Cisco and Evertz powered headend delivering broadcast quality to every home.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="packages-section bg-gray-50">
+        <div class="container">
+            <div class="section-label text-center">CHOOSE YOUR PLAN</div>
+            <h2 class="section-heading text-center">Choose your packages and start your entertainment</h2>
+
+            <div class="packages-grid grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                <div class="package-card">
+                    <div class="package-title">Basic</div>
+                    <div class="package-price">
+                        <span class="currency">₹</span><span class="amount">199</span><span class="per">/mo</span>
+                    </div>
+                    <ul class="package-features">
+                        <li>150+ Digital Channels</li>
+                        <li>SD Quality</li>
+                        <li>10+ Movie Channels</li>
+                        <li>Basic Set Top Box</li>
+                        <li>Standard Installation</li>
+                    </ul>
+                    <a href="pages/contact-us.html#contact-form" class="btn-primary w-full text-center">Get Started</a>
+                </div>
+
+                <div class="package-card featured">
+                    <div class="package-badge">Most Popular</div>
+                    <div class="package-title">HD</div>
+                    <div class="package-price">
+                        <span class="currency">₹</span><span class="amount">349</span><span class="per">/mo</span>
+                    </div>
+                    <ul class="package-features">
+                        <li>350+ Digital Channels</li>
+                        <li>Full HD 1080p Quality</li>
+                        <li>30+ HD Channels</li>
+                        <li>HD Set Top Box</li>
+                        <li>Free Installation</li>
+                        <li>7-Day Catch-Up</li>
+                    </ul>
+                    <a href="pages/contact-us.html#contact-form" class="btn-primary w-full text-center">Get Started</a>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-title">Smart 4K</div>
+                    <div class="package-price">
+                        <span class="currency">₹</span><span class="amount">549</span><span class="per">/mo</span>
+                    </div>
+                    <ul class="package-features">
+                        <li>600+ Digital Channels</li>
+                        <li>4K Ultra HD Quality</li>
+                        <li>80+ HD Channels</li>
+                        <li>Smart 4K Box with Voice</li>
+                        <li>Free Installation</li>
+                        <li>Cloud Recording 50hrs</li>
+                        <li>OTT Apps Included</li>
+                    </ul>
+                    <a href="pages/contact-us.html#contact-form" class="btn-primary w-full text-center">Get Started</a>
+                </div>
+            </div>
+
+            <div class="text-center mt-10">
+                <a href="pages/channel-packages.html" class="see-more-link">See More Plans →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="partners-section">
+        <div class="container">
+            <div class="section-label text-center">OUR TECHNOLOGY PARTNERS</div>
+            <h2 class="section-heading text-center">Integrated with the world's leading infrastructure providers.</h2>
+
+            <div class="partners-scroll" data-loop="true">
+                <div class="partners-track flex gap-8">
+                    <div class="partner-logo">
+                        <img src="../assets/generated/partners/cisco.svg" alt="cisco">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="../assets/generated/partners/evertz.svg" alt="evertz">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="../assets/generated/partners/hp.svg" alt="hp">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="../assets/generated/partners/nagra.svg" alt="nagra">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="../assets/generated/partners/atme.svg" alt="atme">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="../assets/generated/partners/dell.svg" alt="dell">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="../assets/generated/partners/fortinet.svg" alt="fortinet">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="../assets/generated/partners/nstv.svg" alt="nstv">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="../assets/generated/partners/waveion.svg" alt="waveion">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="../assets/generated/partners/cisco.svg" alt="cisco">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="../assets/generated/partners/evertz.svg" alt="evertz">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="../assets/generated/partners/hp.svg" alt="hp">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="../assets/generated/partners/nagra.svg" alt="nagra">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="../assets/generated/partners/atme.svg" alt="atme">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="../assets/generated/partners/dell.svg" alt="dell">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="../assets/generated/partners/fortinet.svg" alt="fortinet">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="../assets/generated/partners/nstv.svg" alt="nstv">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="../assets/generated/partners/waveion.svg" alt="waveion">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-label text-center">SUPPORT & FAQ</div>
+            <h2 class="section-heading text-center">Frequently Asked Questions</h2>
+
+            <div class="faq mt-12">
+                <details>
+                    <summary>
+                        <span>Why should I choose Add On Communications over other cable TV providers?</span>
+                        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </summary>
+                    <p>Add On Communications combines a 12-year legacy in cable distribution with next-gen 4K smart hardware and fiber infrastructure. Our 500+ LCO partners give us unmatched on-ground service, while enterprise-grade headend technology from Cisco and Evertz delivers 99.9% uptime, 24x7 support and over 600 channels to your home.</p>
+                </details>
+                <details>
+                    <summary>
+                        <span>What is an MSO and how does Add On Communications operate as one?</span>
+                        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </summary>
+                    <p>An MSO (Multi-System Operator) acquires content from broadcasters and aggregates it at a central headend, then distributes it through a network of local cable operators (LCOs) to subscribers. Add On Communications manages the core fiber backbone, headend operations and set top box ecosystem, while our LCO partners handle last-mile delivery and on-site service in their respective territories.</p>
+                </details>
+                <details>
+                    <summary>
+                        <span>What is AOD and how does it benefit subscribers?</span>
+                        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </summary>
+                    <p>AOD stands for Add-On-Demand. It is a TRAI-mandated framework that allows you to build a customised channel bouquet by combining a base package with individual a-la-carte channels or small packs. With Add On Communications you can pick and choose exactly what you want to watch using our Selfcare portal, ensuring you only pay for the content you actually consume.</p>
+                </details>
+                <details>
+                    <summary>
+                        <span>How do I get Add On Communications services in my area?</span>
+                        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </summary>
+                    <p>Simply call us at +91 44 4999 0000, email info@addoncommunications.net or fill out the contact form on our website. We will verify service availability in your locality within 2 hours and schedule a free installation slot that suits you. Most installations are completed within 24-48 hours of booking.</p>
+                </details>
+                <details>
+                    <summary>
+                        <span>Is Add On Communications's service scalable for businesses and enterprises?</span>
+                        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </summary>
+                    <p>Absolutely. We offer dedicated enterprise plans for hotels, hospitals, educational institutions, apartment complexes and corporate offices. Solutions include bulk set top box deployments, custom channel bouquets, dedicated bandwidth, IPTV distribution over LAN and 24x7 priority SLA-backed support. Contact our enterprise team for a custom proposal.</p>
+                </details>
+                <details>
+                    <summary>
+                        <span>Do your cable operators also offer broadband and fiber internet?</span>
+                        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </summary>
+                    <p>Yes. Many of our 500+ LCO partners offer fiber broadband over the same local network, powered by Add On Communications's core backbone. Speeds range from 50 Mbps to 1 Gbps with unlimited data options. You can bundle broadband with your cable TV package for significant savings and a single unified bill.</p>
+                </details>
+                <details>
+                    <summary>
+                        <span>Can I access popular OTT apps through my Add On Communications set top box?</span>
+                        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </summary>
+                    <p>Our Smart 4K set top box ships with native support for Netflix, Amazon Prime Video, Disney+ Hotstar, ZEE5, SonyLIV, YouTube and many more. You can sign in to your existing OTT accounts directly from the box and enjoy all your streaming subscriptions alongside live cable TV through a single unified interface.</p>
+                </details>
+                <details>
+                    <summary>
+                        <span>Does Add On Communications provide HD and 4K channels?</span>
+                        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </summary>
+                    <p>Yes. We currently deliver 80+ HD channels across all major genres and languages as part of our HD and Smart 4K plans, plus selected 4K UHD channels and on-demand 4K content through our OTT integrations. A compatible HD or 4K set top box is required to experience these higher resolutions.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="bg-gray-900">
+    <div class="container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 py-12">
+        <div class="footer-col">
+            <div class="flex items-center gap-3 mb-4">
+                <img src="../assets/images/gallery/logo.jpeg" alt="ANC Logo" class="footer-logo">
+                <span class="footer-brand-name text-white font-bold text-2xl">ANC</span>
+            </div>
+            <p class="footer-tagline">The Digital Conduit. Powering Indian homes with fiber internet, smart TV and premium entertainment since 2012.</p>
+        </div>
+        <div class="footer-col">
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pages/about-us.html">About Us</a></li>
+                <li><a href="pages/products.html">Products</a></li>
+                <li><a href="pages/channel-packages.html">Channels</a></li>
+                <li><a href="pages/contact-us.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4 class="footer-heading">Subscriber Services</h4>
+            <ul class="footer-links">
+                <li><a href="#">Selfcare Login</a></li>
+                <li><a href="#">CAF Form</a></li>
+                <li><a href="pages/terms-and-conditions.html">Terms & Conditions</a></li>
+                <li><a href="pages/privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4 class="footer-heading">Contact Support</h4>
+            <ul class="footer-contact">
+                <li>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    Chennai, Tamil Nadu, India
+                </li>
+                <li>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <a href="tel:+914449990000">+91 44 4999 0000</a>
+                </li>
+                <li>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    <a href="mailto:info@addoncommunications.net">info@addoncommunications.net</a>
+                </li>
+            </ul>
+            <div class="social-links flex gap-3 mt-4">
+                <a href="#" aria-label="Instagram" class="social-link">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </a>
+                <a href="#" aria-label="Facebook" class="social-link">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                </a>
+                <a href="#" aria-label="Twitter" class="social-link">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container flex flex-col sm:flex-row items-center justify-between py-4">
+            <p>&copy; 2026 Add On Communications Private Limited. All rights reserved.</p>
+            <p class="mt-2 sm:mt-0">The Digital Conduit for India's Next Billion.</p>
+        </div>
+    </div>
+</footer>
+
+<a href="pages/contact-us.html#contact-form" class="floating-cta fixed bottom-right">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg>
+    New Connection
+</a>
+
+<div class="modal-promotion" id="modalPromotion">
+    <div class="modal-overlay"></div>
+    <div class="modal-dialog">
+        <button class="modal-close" id="modalClose" aria-label="Close">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <div class="modal-banner">
+            <span class="offer-tag">SPECIAL OFFER</span>
+            <h2>Upgrade Your <strong>Entertainment Experience</strong></h2>
+        </div>
+        <div class="modal-body">
+            <p>Switch to Add On Communications Smart 4K this month and get 3 months free + free installation + free voice remote. Limited time offer for Chennai residents.</p>
+            <div class="modal-actions flex gap-3 mt-6 flex-wrap">
+                <button class="maybe-later" id="modalMaybeLater">Maybe Later</button>
+                <a href="pages/contact-us.html#contact-form" class="btn-primary">Get a New Connection</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../assets/js/main.js"></script>
+<script>
+    window.addEventListener('load', function () {
+        if (typeof window.rubi !== 'undefined' && typeof window.rubi.init === 'function') {
+            window.rubi.init();
+        }
+    });
+</script>
+
+</body>
+</html>

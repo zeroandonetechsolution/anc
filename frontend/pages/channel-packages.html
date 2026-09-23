@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Channel Packages | Add On Communications</title>
+    <link rel="icon" type="image/svg+xml" href="../../assets/generated/logo.svg">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/keyframes.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container flex items-center justify-between h-20">
+            <a href="../../frontend/index.html" class="nav-logo">
+                <img src="../../assets/images/gallery/logo.jpeg" alt="Add On Communications Logo" width="44" height="44">
+                <span>Add On</span><span>Communications</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../../frontend/index.html">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li class="nav-dropdown">
+                    <a href="products.html">
+                        Products
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="products.html#set-top-boxes">Set Top Boxes</a>
+                        <a href="products.html#broadband">Broadband</a>
+                        <a href="products.html#ott-integration">OTT Integration</a>
+                    </div>
+                </li>
+                <li><a href="channel-packages.html" class="active">Channel Packages</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+                <li><a href="contact-us.html" class="btn-primary">Get Connection</a></li>
+            </ul>
+            <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-drawer-backdrop" id="mobileDrawerBackdrop"></div>
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="drawer-header flex items-center justify-between">
+            <img src="../../assets/images/gallery/logo.jpeg" alt="Add On Communications Logo" class="drawer-logo">
+            <button id="drawerClose" class="drawer-close" aria-label="Close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+        </div>
+        <ul class="drawer-links">
+            <li><a href="../../frontend/index.html">Home</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="channel-packages.html" class="active">Channel Packages</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+        <a href="contact-us.html" class="btn-primary">Get Connection</a>
+    </div>
+
+    <section class="page-banner">
+        <div class="container">
+            <h1>Channels &amp; Packages</h1>
+        </div>
+    </section>
+
+    <nav class="breadcrumb">
+        <div class="container">
+            <a href="../../frontend/index.html">Home</a>
+            <span class="separator">/</span>
+            <span class="current">Channel Packages</span>
+        </div>
+    </nav>
+
+    <section class="bg-white py-20">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">BASE PLANS</span>
+                <h2 class="section-heading">Choose Your Base Package</h2>
+                <p class="section-subheading">Select the perfect plan that suits your entertainment needs. All packages include installation support and 24/7 customer care.</p>
+            </div>
+            <div class="packages-grid-page">
+                <div class="package-card">
+                    <h3 class="package-name">Free to Air</h3>
+                    <p class="package-desc">Essential viewing for every home</p>
+                    <div class="price">&#8377;99</div>
+                    <div class="price-period">per month</div>
+                    <ul class="package-features">
+                        <li>100+ FTA channels</li>
+                        <li>No HD channels</li>
+                        <li>Basic EPG guide</li>
+                        <li>Standard installation</li>
+                        <li>24/7 customer support</li>
+                    </ul>
+                    <a href="contact-us.html#contact-form?service=Package" class="btn-primary">Select Package</a>
+                </div>
+                <div class="package-card">
+                    <h3 class="package-name">Basic SD</h3>
+                    <p class="package-desc">Complete family entertainment</p>
+                    <div class="price">&#8377;199</div>
+                    <div class="price-period">per month</div>
+                    <ul class="package-features">
+                        <li>150+ SD channels</li>
+                        <li>10 HD channels</li>
+                        <li>Full EPG guide</li>
+                        <li>Free set-top box</li>
+                        <li>On-demand movies</li>
+                    </ul>
+                    <a href="contact-us.html#contact-form?service=Package" class="btn-primary">Select Package</a>
+                </div>
+                <div class="package-card featured">
+                    <span class="package-badge">Most Popular</span>
+                    <h3 class="package-name">Popular HD</h3>
+                    <p class="package-desc">Premium HD experience</p>
+                    <div class="price">&#8377;349</div>
+                    <div class="price-period">per month</div>
+                    <ul class="package-features">
+                        <li>200+ channels</li>
+                        <li>50 HD channels</li>
+                        <li>5.1 Dolby Audio</li>
+                        <li>HD recording (PVR)</li>
+                        <li>Multi-language support</li>
+                    </ul>
+                    <a href="contact-us.html#contact-form?service=Package" class="btn-primary">Select Package</a>
+                </div>
+                <div class="package-card">
+                    <h3 class="package-name">Premium HD</h3>
+                    <p class="package-desc">Ultimate entertainment suite</p>
+                    <div class="price">&#8377;549</div>
+                    <div class="price-period">per month</div>
+                    <ul class="package-features">
+                        <li>300+ channels</li>
+                        <li>100 HD channels</li>
+                        <li>OTT apps included</li>
+                        <li>4K Ultra HD support</li>
+                        <li>Smart STB with WiFi</li>
+                    </ul>
+                    <a href="contact-us.html#contact-form?service=Package" class="btn-primary">Select Package</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-gray-50 py-20">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">ADD-ONS</span>
+                <h2 class="section-heading">Broadcaster Bouquets</h2>
+                <p class="section-subheading">Enhance your base package with curated broadcaster bouquets. Mix and match to build your perfect channel lineup.</p>
+            </div>
+            <div class="bouquet-wrapper">
+                <table class="bouquet-table">
+                    <thead>
+                        <tr>
+                            <th>Broadcaster</th>
+                            <th>Channels</th>
+                            <th>Price / month</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="bouquet-name">Sony Pictures Networks</td>
+                            <td>Sony Max, Sony SAB, Sony TV, Sony Pix, Sony Aath, Sony BBC Earth, Sony Sports &amp; more</td>
+                            <td class="bouquet-price">&#8377;40</td>
+                        </tr>
+                        <tr>
+                            <td class="bouquet-name">Star India</td>
+                            <td>Star Plus, Star Gold, Star Bharat, Star Sports 1, Star Movies, National Geographic &amp; more</td>
+                            <td class="bouquet-price">&#8377;45</td>
+                        </tr>
+                        <tr>
+                            <td class="bouquet-name">Zee Entertainment</td>
+                            <td>Zee TV, Zee Cinema, Zee Anmol, Zee Marathi, Zee Bangla, Zee News, &amp;pictures &amp; more</td>
+                            <td class="bouquet-price">&#8377;40</td>
+                        </tr>
+                        <tr>
+                            <td class="bouquet-name">Warner Bros. Discovery</td>
+                            <td>Discovery, Animal Planet, TLC, Cartoon Network, Pogo, Discovery Science, Eurosport &amp; more</td>
+                            <td class="bouquet-price">&#8377;25</td>
+                        </tr>
+                        <tr>
+                            <td class="bouquet-name">Viacom18</td>
+                            <td>Colors, Colors Cineplex, MTV, Voot, Nickelodeon, Comedy Central, VH1, C&amp;B &amp; more</td>
+                            <td class="bouquet-price">&#8377;35</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-20">
+        <div class="container">
+            <div class="max-w-3xl">
+                <div class="section-header text-center">
+                    <span class="section-label">TRAI REGULATION</span>
+                    <h2 class="section-heading">Network Capacity Fee</h2>
+                </div>
+                <div class="info-card">
+                    <h3>Understanding TRAI NCF Charges</h3>
+                    <p>As per the Telecom Regulatory Authority of India (TRAI) regulations, all cable TV and DTH subscribers are required to pay a Network Capacity Fee (NCF) in addition to the subscription charges for selected channels and bouquets.</p>
+                    <p>The NCF structure ensures fair pricing and gives you the freedom to choose only the channels you want to watch. Here's how it works:</p>
+                    <ul>
+                        <li><strong>&#8377;130</strong> as NCF for the first 200 channels (including taxes)</li>
+                        <li><strong>&#8377;2</strong> per additional channel beyond 200 channels</li>
+                        <li>Maximum NCF cap of <strong>&#8377;160</strong> per month for unlimited channels</li>
+                        <li>18% GST applicable on NCF as per government regulations</li>
+                    </ul>
+                    <p class="info-card-note">NCF is billed separately from your channel subscription and is standard across all service providers in India. This transparent pricing model is designed to protect consumer interests and promote healthy competition in the broadcast industry.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900">
+        <div class="container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 py-12">
+            <div class="footer-col">
+                <div class="flex items-center gap-3 mb-4">
+                    <img src="../../assets/images/gallery/logo.jpeg" alt="ANC Logo" class="footer-logo">
+                    <span class="footer-brand-name text-white font-bold text-2xl">ANC</span>
+                </div>
+                <p class="footer-tagline">The Digital Conduit. Powering Indian homes with fiber internet, smart TV and premium entertainment since 2012.</p>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="../../frontend/index.html">Home</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="channel-packages.html">Channels</a></li>
+                    <li><a href="contact-us.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Subscriber Services</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Selfcare Login</a></li>
+                    <li><a href="#">CAF Form</a></li>
+                    <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Contact Support</h4>
+                <ul class="footer-contact">
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        Chennai, Tamil Nadu, India
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <a href="tel:+914449990000">+91 44 4999 0000</a>
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        <a href="mailto:info@addoncommunications.net">info@addoncommunications.net</a>
+                    </li>
+                </ul>
+                <div class="social-links flex gap-3 mt-4">
+                    <a href="#" aria-label="Instagram" class="social-link">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </a>
+                    <a href="#" aria-label="Facebook" class="social-link">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
+                    <a href="#" aria-label="Twitter" class="social-link">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container flex flex-col sm:flex-row items-center justify-between py-4">
+                <p>&copy; 2026 Add On Communications Private Limited. All rights reserved.</p>
+                <p class="mt-2 sm:mt-0">The Digital Conduit for India's Next Billion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="contact-us.html" class="floating-cta" aria-label="Get Connection">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        Get Connection
+    </a>
+
+    <script src="../../assets/js/main.js"></script>
+    <script>
+        window.rubi.init();
+    </script>
+
+</body>
+</html>
