@@ -4,23 +4,57 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/", "destination": "/frontend/index.html" },
-    { "source": "/assets/:path*", "destination": "/assets/:path*" },
-    { "source": "/frontend/:path*", "destination": "/frontend/:path*" },
-    { "source": "/pages/:path*", "destination": "/frontend/pages/:path*" },
-    { "source": "/((?!assets|frontend|backend|config|scripts|index\\.php).*)", "destination": "/frontend/pages/:match*.html" }
+    {
+      "source": "/",
+      "destination": "/frontend/index.html"
+    },
+    {
+      "source": "/assets/:path*",
+      "destination": "/assets/:path*"
+    },
+    {
+      "source": "/frontend/:path*",
+      "destination": "/frontend/:path*"
+    },
+    {
+      "source": "/pages/:path*",
+      "destination": "/frontend/pages/:path*"
+    },
+    {
+      "source": "/:match*",
+      "destination": "/frontend/pages/:match*.html"
+    }
   ],
   "redirects": [
-    { "source": "/index.html", "destination": "/", "permanent": true },
-    { "source": "/frontend", "destination": "/", "permanent": true },
-    { "source": "/frontend/", "destination": "/", "permanent": true },
-    { "source": "/frontend/index.html", "destination": "/", "permanent": true }
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/frontend",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/frontend/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/frontend/index.html",
+      "destination": "/",
+      "permanent": true
+    }
   ],
   "headers": [
     {
       "source": "/assets/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     }
   ]
