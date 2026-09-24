@@ -21,8 +21,8 @@
       "destination": "/frontend/pages/:path*"
     },
     {
-      "source": "/:match*",
-      "destination": "/frontend/pages/:match*.html"
+      "source": "/:path*",
+      "destination": "/frontend/pages/:path*"
     }
   ],
   "redirects": [
