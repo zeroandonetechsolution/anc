@@ -3455,3 +3455,521 @@ footer ul li a:hover {
   line-height: 1.65;
   margin: 0;
 }
+
+/* -------------------------------------------------------------
+   RESPONSIVE & CROSS-DEVICE OPTIMISATIONS
+   Targets: Mobile (<640), Tablet (640-1023), Laptop (1024-1279), Desktop (1280+)
+   ------------------------------------------------------------- */
+
+/* ---- Global viewport defaults ---- */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+img, svg, video { max-width: 100%; height: auto; display: block; }
+picture { display: block; }
+button { touch-action: manipulation; }
+
+/* ---- Container sizing (fluid across breakpoints) ---- */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 100%;
+}
+@media (min-width: 480px)  { .container { padding-left: 1.25rem; padding-right: 1.25rem; } }
+@media (min-width: 640px)  { .container { max-width: 640px; } }
+@media (min-width: 768px)  { .container { max-width: 768px; padding-left: 1.5rem; padding-right: 1.5rem; } }
+@media (min-width: 1024px) { .container { max-width: 1024px; } }
+@media (min-width: 1280px) { .container { max-width: 1200px; padding-left: 2rem; padding-right: 2rem; } }
+@media (min-width: 1536px) { .container { max-width: 1320px; } }
+
+/* ---- Navbar & mobile drawer (fits small screens + huge landscape tablets) ---- */
+.navbar .container { height: 76px; }
+@media (min-width: 1024px) { .navbar .container { height: 92px; } }
+
+.nav-logo img.logo-img,
+.nav-logo img {
+  width: 40px !important;
+  height: 40px !important;
+}
+.nav-logo span {
+  font-size: 1rem;
+  line-height: 1.05;
+  display: inline-block;
+}
+.nav-logo span + span { margin-left: 0.25rem; }
+@media (min-width: 480px) {
+  .nav-logo img.logo-img,
+  .nav-logo img { width: 44px !important; height: 44px !important; }
+  .nav-logo span { font-size: 1.1rem; }
+}
+@media (min-width: 1024px) {
+  .nav-logo img.logo-img,
+  .nav-logo img { width: 52px !important; height: 52px !important; }
+  .nav-logo span { font-size: 1.35rem; }
+}
+
+/* Hide full nav-links below desktop, show menu toggle */
+.nav-links { display: none; }
+.menu-toggle { display: inline-flex; }
+@media (min-width: 992px) {
+  .nav-links { display: flex; }
+  .menu-toggle { display: none; }
+}
+
+/* Nav links: reduce gaps & font on tablets between md & lg */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .nav-links { gap: 1.25rem; font-size: 0.92rem; }
+}
+
+/* Mobile drawer: full-screen slide-in without breaking on tall/narrow phones */
+.mobile-drawer {
+  max-width: 88%;
+  width: 320px;
+}
+@media (max-width: 380px) { .mobile-drawer { width: 90%; max-width: 90%; } }
+@media (min-width: 640px) { .mobile-drawer { width: 360px; } }
+
+.drawer-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 0.75rem;
+  object-fit: cover;
+}
+.drawer-links a,
+.drawer-links .drawer-subheading {
+  padding: 0.85rem 0.5rem;
+  font-size: 1rem;
+}
+@media (min-width: 480px) {
+  .drawer-links a,
+  .drawer-links .drawer-subheading { padding: 0.95rem 0.75rem; font-size: 1.02rem; }
+}
+
+/* ---- Hero Carousel: fits every device (small phones → 4K) ---- */
+.hero-carousel,
+.hero-carousel .slide {
+  height: 78vh;
+  min-height: 380px;
+  max-height: 780px;
+}
+@media (max-width: 479px) {
+  .hero-carousel,
+  .hero-carousel .slide { height: 82vh; min-height: 460px; max-height: 580px; }
+}
+@media (min-width: 480px) and (max-width: 639px) {
+  .hero-carousel,
+  .hero-carousel .slide { height: 76vh; min-height: 440px; max-height: 620px; }
+}
+@media (min-width: 640px) and (max-width: 1023px) {
+  .hero-carousel,
+  .hero-carousel .slide { height: 68vh; min-height: 460px; max-height: 680px; }
+}
+@media (min-width: 1280px) {
+  .hero-carousel,
+  .hero-carousel .slide { height: 72vh; min-height: 560px; max-height: 820px; }
+}
+
+.hero-carousel .slide-content {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 3.5rem;
+  padding-bottom: 5rem;
+}
+@media (min-width: 480px)  { .hero-carousel .slide-content { padding-left: 1rem; padding-right: 1rem; padding-top: 2.5rem; } }
+@media (min-width: 640px)  { .hero-carousel .slide-content { padding-left: 1.25rem; padding-right: 1.25rem; } }
+@media (min-width: 1024px) { .hero-carousel .slide-content { padding-left: 0;      padding-right: 0;      padding-top: 0; padding-bottom: 0; } }
+
+.hero-carousel .slide-content h2 {
+  font-size: 1.75rem;
+  line-height: 1.15;
+  max-width: 22ch;
+}
+.hero-carousel .slide-content p {
+  font-size: 0.95rem;
+  max-width: 52ch;
+  margin-bottom: 1.25rem;
+}
+.hero-carousel .slide-content .btn-primary {
+  padding: 0.7rem 1.2rem;
+  font-size: 0.92rem;
+}
+@media (min-width: 480px) {
+  .hero-carousel .slide-content h2 { font-size: 2.1rem; }
+  .hero-carousel .slide-content p  { font-size: 1rem; }
+}
+@media (min-width: 640px) {
+  .hero-carousel .slide-content h2 { font-size: 2.6rem; }
+  .hero-carousel .slide-content p  { font-size: 1.05rem; max-width: 60ch; margin-bottom: 1.5rem; }
+  .hero-carousel .slide-content .btn-primary { padding: 0.8rem 1.5rem; font-size: 1rem; }
+}
+@media (min-width: 1024px) {
+  .hero-carousel .slide-content h2 { font-size: 3.25rem; }
+  .hero-carousel .slide-content p  { font-size: 1.1rem;   max-width: 62ch; }
+}
+@media (min-width: 1280px) {
+  .hero-carousel .slide-content h2 { font-size: 4rem; }
+}
+
+/* Carousel controls: easier to hit on touch screens, unobtrusive on desktop */
+.hero-carousel .prev-btn,
+.hero-carousel .next-btn {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  min-height: 42px;
+}
+@media (max-width: 479px) {
+  .hero-carousel .prev-btn { left: 0.5rem; }
+  .hero-carousel .next-btn { right: 0.5rem; }
+}
+@media (min-width: 640px) and (max-width: 1023px) {
+  .hero-carousel .prev-btn,
+  .hero-carousel .next-btn { width: 48px; height: 48px; }
+  .hero-carousel .prev-btn { left: 1.25rem; }
+  .hero-carousel .next-btn { right: 1.25rem; }
+}
+@media (min-width: 1024px) {
+  .hero-carousel .prev-btn,
+  .hero-carousel .next-btn { width: 52px; height: 52px; }
+}
+
+.carousel-dots {
+  bottom: 1.25rem;
+  gap: 0.4rem;
+}
+.carousel-dots .dot {
+  width: 8px;
+  height: 8px;
+  min-width: 8px;
+  min-height: 8px;
+}
+.carousel-dots .dot.active { width: 22px; }
+@media (min-width: 640px) {
+  .carousel-dots { bottom: 1.75rem; gap: 0.5rem; }
+  .carousel-dots .dot { width: 10px; height: 10px; }
+  .carousel-dots .dot.active { width: 28px; }
+}
+
+/* Improve slide transition smoothness */
+@media (prefers-reduced-motion: reduce) {
+  .hero-carousel .slide { transition: none !important; }
+  .hero-carousel .slide-content h2,
+  .hero-carousel .slide-content p,
+  .hero-carousel .slide-content .btn-primary { animation: none !important; }
+}
+
+/* ---- Headings scale down on narrow phones ---- */
+.section-heading {
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+.section-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+}
+@media (min-width: 480px)  { .section-heading { font-size: 1.85rem; } .section-label { font-size: 0.8rem; } }
+@media (min-width: 640px)  { .section-heading { font-size: 2.15rem; } }
+@media (min-width: 1024px) { .section-heading { font-size: 2.6rem;  } .section-label { font-size: 0.85rem; } }
+@media (min-width: 1280px) { .section-heading { font-size: 3rem;    } }
+
+/* ---- Generic grid safety (prevents horizontal overflow & awkward 1-col on tablets) ---- */
+[class*="grid-cols-"] {
+  width: 100%;
+}
+.grid.grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 380px) {
+  .grid.grid-cols-2:not(.device-strip):not(.packages-grid) { grid-template-columns: 1fr; }
+}
+
+/* ---- Device strip ---- */
+.device-strip.grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 640px)  { .device-strip.grid-cols-2 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 1024px) { .device-strip.grid-cols-2 { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+.device-card {
+  padding: 1rem 0.75rem;
+}
+.device-icon {
+  width: 56px;
+  height: 56px;
+}
+@media (min-width: 640px) {
+  .device-card { padding: 1.25rem 1rem; }
+  .device-icon { width: 64px; height: 64px; }
+}
+
+/* ---- Hardware / Entertainment 2-col sections ---- */
+.hardware-section .grid.lg\:grid-cols-2,
+.entertainment-section .grid.lg\:grid-cols-2 {
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+@media (min-width: 1024px) {
+  .hardware-section .grid.lg\:grid-cols-2,
+  .entertainment-section .grid.lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4rem;
+  }
+}
+.hardware-img,
+.entertainment-img {
+  width: 100%;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 1rem;
+}
+.feature-sub-card,
+.feature-card,
+.tab-card,
+.device-card,
+.package-card,
+.faq details,
+.partner-logo {
+  break-inside: avoid;
+}
+
+/* Feature sub-grid on smallest screens: 1 col */
+.feature-grid.grid.sm\:grid-cols-2,
+.entertainment-features.grid.sm\:grid-cols-2 { grid-template-columns: 1fr; gap: 1rem; }
+@media (min-width: 640px) {
+  .feature-grid.grid.sm\:grid-cols-2,
+  .entertainment-features.grid.sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
+}
+
+/* ---- Stats / counter numbers ---- */
+.stats-section .grid.grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+@media (min-width: 1024px) {
+  .stats-section .grid.grid-cols-2 { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2rem; }
+}
+.counter-num {
+  font-size: 2rem;
+  line-height: 1.1;
+}
+.stat-label { font-size: 0.9rem; }
+.stat-subtitle { font-size: 0.8rem; }
+@media (min-width: 480px)  { .counter-num { font-size: 2.4rem; } }
+@media (min-width: 640px)  { .counter-num { font-size: 2.8rem; } .stat-label { font-size: 1rem; } }
+@media (min-width: 1024px) { .counter-num { font-size: 3.2rem; } }
+@media (min-width: 1280px) { .counter-num { font-size: 3.8rem; } }
+
+/* ---- Tabs ---- */
+.tab-list {
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+.tab-btn {
+  padding: 0.6rem 0.9rem;
+  font-size: 0.9rem;
+  border-radius: 0.6rem;
+}
+@media (min-width: 640px) {
+  .tab-btn { padding: 0.75rem 1.2rem; font-size: 0.95rem; }
+  .tab-list { gap: 0.6rem; }
+}
+
+/* ---- Packages grid (critical — 1 col on mobile, 3 on desktop) ---- */
+.packages-grid.grid.md\:grid-cols-3 { grid-template-columns: 1fr; gap: 1.5rem; }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .packages-grid.grid.md\:grid-cols-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 1024px) {
+  .packages-grid.grid.md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; }
+}
+.package-card { padding: 1.75rem 1.25rem; border-radius: 1rem; }
+@media (min-width: 640px) { .package-card { padding: 2rem 1.5rem; } }
+.package-price .amount { font-size: 2.25rem; }
+.package-price .currency { font-size: 1.1rem; }
+.package-title { font-size: 1.1rem; }
+.package-features li { padding: 0.4rem 0; font-size: 0.92rem; }
+@media (min-width: 640px) {
+  .package-price .amount { font-size: 2.6rem; }
+  .package-title { font-size: 1.2rem; }
+  .package-features li { font-size: 0.98rem; }
+}
+
+/* ---- Partners strip (touch-friendly horizontal scroll fallback) ---- */
+.partners-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  padding-bottom: 0.5rem;
+}
+.partners-track {
+  flex-wrap: nowrap;
+  min-width: max-content;
+}
+.partner-logo {
+  min-width: 110px;
+  padding: 0.75rem 1rem;
+}
+.partner-logo img {
+  max-height: 36px;
+  width: auto;
+}
+@media (min-width: 640px) {
+  .partner-logo { min-width: 130px; padding: 1rem 1.25rem; }
+  .partner-logo img { max-height: 44px; }
+}
+@media (min-width: 1024px) {
+  .partner-logo img { max-height: 52px; }
+}
+
+/* ---- FAQ / Accordion (easy tapping on mobile) ---- */
+.faq details {
+  border-radius: 0.85rem;
+  overflow: hidden;
+}
+.faq summary {
+  padding: 1rem 1rem 1rem 1.25rem;
+  font-size: 0.95rem;
+  gap: 0.75rem;
+}
+.faq details p {
+  padding: 0 1.25rem 1.25rem;
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+@media (min-width: 640px) {
+  .faq summary { padding: 1.25rem 1.25rem 1.25rem 1.5rem; font-size: 1rem; }
+  .faq details p { padding: 0 1.5rem 1.5rem; font-size: 0.98rem; }
+}
+@media (min-width: 1024px) {
+  .faq summary { padding: 1.4rem 1.6rem; font-size: 1.05rem; }
+  .faq details p { padding: 0 1.6rem 1.6rem; }
+}
+
+/* ---- Footer (4 cols on desktop, 2 on tablet, 1 on mobile) ---- */
+footer .grid.lg\:grid-cols-4 { grid-template-columns: 1fr; gap: 2.5rem; }
+@media (min-width: 640px)  { footer .grid.lg\:grid-cols-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; } }
+@media (min-width: 1024px) { footer .grid.lg\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2.5rem; } }
+.footer-heading { font-size: 1rem; margin-bottom: 0.9rem; }
+.footer-links a,
+.footer-contact li,
+.footer-tagline { font-size: 0.92rem; line-height: 1.7; }
+.footer-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 0.85rem;
+  object-fit: cover;
+}
+@media (min-width: 640px) {
+  .footer-heading { font-size: 1.05rem; }
+  .footer-logo { width: 52px; height: 52px; }
+}
+.footer-bottom .container p {
+  font-size: 0.82rem;
+  text-align: center;
+}
+@media (min-width: 640px) {
+  .footer-bottom .container p { font-size: 0.88rem; }
+}
+
+/* ---- Floating CTA button (mobile: smaller, not blocking content) ---- */
+.floating-cta {
+  right: 1rem;
+  bottom: 1rem;
+  padding: 0.65rem 0.9rem;
+  font-size: 0.85rem;
+  gap: 0.35rem;
+  border-radius: 999px;
+  z-index: 60;
+}
+@media (min-width: 640px) {
+  .floating-cta {
+    right: 1.5rem;
+    bottom: 1.5rem;
+    padding: 0.75rem 1.1rem;
+    font-size: 0.92rem;
+  }
+}
+@media (min-width: 1024px) {
+  .floating-cta {
+    right: 2rem;
+    bottom: 2rem;
+    padding: 0.85rem 1.25rem;
+    font-size: 1rem;
+  }
+}
+
+/* ---- Modals (dialog) ---- */
+.modal-dialog {
+  width: calc(100% - 2rem);
+  max-width: 480px;
+  margin: 1rem auto;
+  border-radius: 1rem;
+}
+.modal-actions { gap: 0.6rem; }
+.modal-actions .btn-primary,
+.modal-actions .maybe-later {
+  flex: 1 1 auto;
+  text-align: center;
+  justify-content: center;
+  padding: 0.7rem 0.9rem;
+  font-size: 0.92rem;
+  border-radius: 0.7rem;
+}
+@media (min-width: 480px) {
+  .modal-dialog { max-width: 520px; }
+}
+@media (min-width: 640px) {
+  .modal-dialog { max-width: 560px; }
+  .modal-actions .btn-primary,
+  .modal-actions .maybe-later { padding: 0.8rem 1rem; font-size: 1rem; }
+}
+
+/* ---- Forms (contact-us) ---- */
+#contact-form .form-group input,
+#contact-form .form-group textarea,
+#contact-form .form-group select {
+  width: 100%;
+  max-width: 100%;
+  font-size: 1rem;
+  padding: 0.75rem 0.9rem;
+  border-radius: 0.65rem;
+}
+@media (min-width: 640px) {
+  #contact-form .form-group input,
+  #contact-form .form-group textarea,
+  #contact-form .form-group select { padding: 0.85rem 1rem; border-radius: 0.75rem; }
+}
+
+/* ---- Utility: hide horizontal scroll caused by wide elements ---- */
+body > main,
+body > header,
+body > footer {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* ---- High-DPI (Retina) crisp rendering ---- */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .hero-carousel .slide-bg { image-rendering: -webkit-optimize-contrast; }
+}
+
+/* ---- Landscape phones optimizations (short viewports) ---- */
+@media (max-height: 540px) and (orientation: landscape) {
+  .hero-carousel,
+  .hero-carousel .slide { height: 92vh; min-height: 320px; }
+  .hero-carousel .slide-content h2 { font-size: 1.6rem; }
+  .hero-carousel .slide-content p  { font-size: 0.9rem; margin-bottom: 0.75rem; }
+  .navbar .container { height: 64px; }
+}
+
+/* ---- Focus visibility (keyboard users on laptops / desktops) ---- */
+:focus-visible {
+  outline: 3px solid rgba(140,198,63,0.45);
+  outline-offset: 2px;
+  border-radius: 0.3rem;
+}
+

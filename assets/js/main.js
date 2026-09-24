@@ -167,6 +167,7 @@ window.rubi = (() => {
             d.classList.remove('active');
           }
         });
+        if (dots[currentIndex]) dots[currentIndex].setAttribute('aria-current', 'true');
       };
 
       const nextSlide = () => goToSlide(currentIndex + 1);
@@ -184,18 +185,89 @@ window.rubi = (() => {
         }
       };
 
-      if (nextBtn) nextBtn.addEventListener('click', nextSlide);
-      if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+      const manualAdvance = (fn) => {
+        fn();
+        stopAuto();
+        startAuto();
+      };
+
+      if (nextBtn) {
+        nextBtn.setAttribute('aria-label', 'Next slide');
+        nextBtn.addEventListener('click', () => manualAdvance(nextSlide));
+      }
+      if (prevBtn) {
+        prevBtn.setAttribute('aria-label', 'Previous slide');
+        prevBtn.addEventListener('click', () => manualAdvance(prevSlide));
+      }
 
       dots.forEach((dot, i) => {
-        dot.addEventListener('click', () => goToSlide(i));
+        dot.setAttribute('role', 'tab');
+        dot.setAttribute('aria-label', `Slide ${i + 1}`);
+        dot.addEventListener('click', () => manualAdvance(() => goToSlide(i)));
       });
 
       carousel.addEventListener('mouseenter', stopAuto);
       carousel.addEventListener('mouseleave', startAuto);
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+          stopAuto();
+        } else {
+          startAuto();
+        }
+      });
 
-      goToSlide(0);
-      startAuto();
+      let touchStartX = 0;
+      let touchEndX = 0;
+      let touchStartY = 0;
+      let touchEndY = 0;
+      const minSwipe = 40;
+      carousel.addEventListener(
+        'touchstart',
+        (e) => {
+          const t = e.changedTouches[0];
+          touchStartX = t.screenX;
+          touchStartY = t.screenY;
+          stopAuto();
+        },
+        { passive: true }
+      );
+      carousel.addEventListener(
+        'touchmove',
+        (e) => {
+          const t = e.changedTouches[0];
+          touchEndX = t.screenX;
+          touchEndY = t.screenY;
+        },
+        { passive: true }
+      );
+      carousel.addEventListener(
+        'touchend',
+        () => {
+          const dx = touchEndX - touchStartX;
+          const dy = touchEndY - touchStartY;
+          if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) >= minSwipe) {
+            if (dx < 0) {
+              manualAdvance(nextSlide);
+            } else {
+              manualAdvance(prevSlide);
+            }
+          } else {
+            startAuto();
+          }
+          touchStartX = 0;
+          touchEndX = 0;
+          touchStartY = 0;
+          touchEndY = 0;
+        },
+        { passive: true }
+      );
+
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        goToSlide(0);
+      } else {
+        goToSlide(0);
+        startAuto();
+      }
     };
 
     return { init };
